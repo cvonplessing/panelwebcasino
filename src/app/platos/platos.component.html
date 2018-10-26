@@ -1,3 +1,8 @@
-<p>
-  platos works!
-</p>
+
+
+<h1>Menús del dia</h1>
+<ul class="platos">
+  <li *ngFor="let plato of platos" (click)="onSelect(plato)">
+    <span class="badge"></span> {{plato.principal}}
+  </li>
+</ul>
