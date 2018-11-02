@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'Panel Administración';
-  casino = 'NombreDeCasinoAqui';
-
+  title = 'Administración Casinos Udec';
 }

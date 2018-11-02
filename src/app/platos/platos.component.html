@@ -1,8 +1,49 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Administración Casinos UdeC</span>
+    <span class="toolbar-spacer"></span>
+    <span>{{defaultCasino.nombreCasino}}</span>
+    <div class="example-button-row">
+      <button mat-button>Salir</button>
+    </div>
+
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span>Búsqueda de minutas</span>
+
+    <div class="buscador">
+      <mat-form-field>
+        <input placeholder="mm/dd/año" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <span class="toolbar-spacer"></span>
+    <div class="example-button-row">
+      <button mat-button>Cambiar de casino</button>
+      <button mat-button>Subir minuta</button>
+    </div>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<div class="bcontenedor">
+  <div class="block">
+    <mat-accordion *ngFor="let plato of platos;" >
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{plato.nombrePlato}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+          <p>tipo: {{plato.tipoPlato}}</p>
+          <p>agregado: {{plato.agregadoPlato}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
 
 
-<h1>Menús del dia</h1>
-<ul class="platos">
-  <li *ngFor="let plato of platos" (click)="onSelect(plato)">
-    <span class="badge"></span> {{plato.principal}}
-  </li>
-</ul>
+  </div>
+</div>
+
