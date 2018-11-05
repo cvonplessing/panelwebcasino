@@ -11,12 +11,17 @@
 }
 .bcontenedor{
   margin-top:8px;
+  margin-bottom:auto;
 }
 
 .block{
-  display:inline-block;
   border-style:solid;
   border-color:black;
   margin-left:auto;
+}
+.buttonblock{
+  border-style:solid;
+  border-color:black;
   margin-right:auto;
+  margin-left:auto;
 }
