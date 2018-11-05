@@ -38,10 +38,22 @@
             <h1> {{plato.nombrePlato}} </h1>
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <h2>
+
           <p>tipo: {{plato.tipoPlato}}</p>
           <p>agregado: {{plato.agregadoPlato}}</p>
-        </h2>
+
+          <div class="boton">
+              <button (click)="onEditar()" mat-raised-button color="primary">Editar</button>
+                <div *ngIf="toggle">
+                  <h2>Editar plato seleccionado</h2>
+                    <form class="editar">
+                      <mat-form-field class="editarf">
+                        <input matInput placeholder={{plato.nombrePlato}} value="">
+                      </mat-form-field>
+                    </form>
+                </div>
+              </div>
+
       </mat-expansion-panel>
     </mat-accordion>
 

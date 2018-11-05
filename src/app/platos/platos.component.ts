@@ -9,7 +9,7 @@ import { Casino } from '../models_/casino';
 export class PlatosComponent implements OnInit {
 
   defaultCasino: Casino = new Casino(0, 'Ombligo');
-
+  toggle : boolean = false;
   // hardcode
   platos: Plato[] = [
     {
@@ -38,8 +38,8 @@ export class PlatosComponent implements OnInit {
   ngOnInit() {
 
   }
-  onSelect(): void {
 
+  onEditar(): void {
+    this.toggle = !this.toggle;
   }
-
 }
