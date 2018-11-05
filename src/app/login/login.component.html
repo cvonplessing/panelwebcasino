@@ -1,27 +1,65 @@
-<mat-card class="example-card">
+<!--
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+    <span>Administración Casinos UdeC</span>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-card>
 
   <mat-card-header>
-    <mat-card-title>Login</mat-card-title>
+    <mat-card-title>
+      Login Casinos UdeC
+    </mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <form class="example-form">
-      <table class="example-full-width" cellspacing="0">
-        <tr>
-          <td>
-            <mat-form-field class="example-full-width">
-              <input matInput placeholder="Usuario E-mail">
-            </mat-form-field>
-          </td>
-        </tr>
-        <tr>
-          <td><mat-form-field class="example-full-width">
-            <input matInput placeholder="Contraseña" type="password">
-          </mat-form-field></td>
-        </tr></table>
 
-    </form>
+  <mat-card-content>
+
+
+
+  <mat-form-field>
+    <input matInput="usuario" type="text" placeholder="E-mail">
+  </mat-form-field>
+
+    <mat-form-field>
+      <input matInput="contraseña" type="password" placeholder="Contraseña">
+  </mat-form-field>
+
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Ingresar</button>
+    </div>
+
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="primary">Login</button>
-  </mat-card-actions>
+
 </mat-card>
+-->
+
+<mat-toolbar color="primary" ><span class="span">Bienvenidos a Casinos UdeC</span></mat-toolbar>
+
+<div class="card-container">
+
+  <mat-card  class="card-content">
+
+    <form  class="form-elements">
+      <br/>
+      <p>LOGIN</p>
+      <mat-form-field class="form-row">
+                                    <span matTooltip="Username">
+                                        <input matInput placeholder="E-mail" id="username"  name="username">
+                                    </span>
+        <span matPrefix></span>
+      </mat-form-field>
+
+      <mat-form-field class="form-row">
+                                    <span matTooltip="Password">
+                                        <input matInput placeholder="Contraseña" id="password"  name="gpassword" type="password">
+                                    </span>
+        <span matPrefix></span>
+      </mat-form-field>
+      <br/>
+      <button mat-raised-button color="primary" type="submit" style="border-radius:15px;max-height:6vh;">Entrar</button>
+    </form>
+
+  </mat-card>
