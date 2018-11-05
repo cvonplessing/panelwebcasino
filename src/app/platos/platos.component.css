@@ -16,7 +16,7 @@
 .block{
   display:inline-block;
   border-style:solid;
-  border-color:black;
-  margin-left:auto;
+  border-color:blue;
+  margin-left:30px;
   margin-right:auto;
 }
