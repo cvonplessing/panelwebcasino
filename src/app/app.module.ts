@@ -6,12 +6,14 @@ import { PlatosComponent } from './platos/platos.component';
 import { LoginComponent } from './login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Material } from './modules_/material';
+import { SenderComponent } from './sender/sender.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlatosComponent,
-    LoginComponent
+    LoginComponent,
+    SenderComponent
   ],
   imports: [
     BrowserModule,

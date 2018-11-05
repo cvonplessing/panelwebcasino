@@ -29,34 +29,32 @@
 
 </mat-toolbar>
 
+
 <div class="bcontenedor">
   <div class="block">
     <mat-accordion *ngFor="let plato of platos;" >
       <mat-expansion-panel>
         <mat-expansion-panel-header>
+
           <mat-panel-title>
             <h1> {{plato.nombrePlato}} </h1>
           </mat-panel-title>
+          <mat-panel-description>
+            No sé qué poner aquí para que se vea bonito
+          </mat-panel-description>
         </mat-expansion-panel-header>
 
           <p>tipo: {{plato.tipoPlato}}</p>
           <p>agregado: {{plato.agregadoPlato}}</p>
-
-          <div class="boton">
-              <button (click)="onEditar()" mat-raised-button color="primary">Editar</button>
-                <div *ngIf="toggle">
-                  <h2>Editar plato seleccionado</h2>
-                    <form class="editar">
-                      <mat-form-field class="editarf">
-                        <input matInput placeholder={{plato.nombrePlato}} value="">
-                      </mat-form-field>
-                    </form>
-                </div>
-              </div>
-
+          <mat-action-row>
+            <button mat-raised-button color="primary">Editar</button>
+          </mat-action-row>
       </mat-expansion-panel>
     </mat-accordion>
 
-
   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3a5a19666a92dc231ce07b171ca3e2913961dce8
 </div>
