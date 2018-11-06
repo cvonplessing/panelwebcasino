@@ -1,12 +1,11 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Administración Casinos UdeC</span>
+    <span><a routerLink="/platos" routerLinkActive="active">Administración Casinos UdeC</a></span>
     <span class="toolbar-spacer"></span>
     <span>{{defaultCasino.nombreCasino}}</span>
     <div class="example-button-row">
-      <button mat-button>Salir</button>
+      <a mat-button routerLink="/login" routerLinkActive="active" >Salir</a>
     </div>
-
   </mat-toolbar-row>
 
   <mat-toolbar-row>
@@ -23,7 +22,7 @@
     <span class="toolbar-spacer"></span>
     <div class="example-button-row">
       <button mat-button>Cambiar de casino</button>
-      <button mat-button>Subir minuta</button>
+      <a mat-button routerLink="sender" routerLinkActive="active">Subir minuta</a>
     </div>
   </mat-toolbar-row>
 

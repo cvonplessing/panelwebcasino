@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Material } from './modules_/material';
 import { SenderComponent } from './sender/sender.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SenderComponent } from './sender/sender.component';
   imports: [
     BrowserModule,
     Material,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
