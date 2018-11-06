@@ -1,15 +1,4 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Administración Casinos UdeC</span>
-    <span class="toolbar-spacer"></span>
-    <span>{{defaultCasino.nombreCasino}}</span>
-    <div class="example-button-row">
-      <button mat-button>Salir</button>
-    </div>
-
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
     <span>Búsqueda de minutas</span>
 
     <div class="buscador">
@@ -19,16 +8,7 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
-
-    <span class="toolbar-spacer"></span>
-    <div class="example-button-row">
-      <button mat-button>Cambiar de casino</button>
-      <button mat-button>Subir minuta</button>
-    </div>
-  </mat-toolbar-row>
-
 </mat-toolbar>
-
 
 <div class="bcontenedor">
   <div class="block">
@@ -43,11 +23,18 @@
             No sé qué poner aquí para que se vea bonito
           </mat-panel-description>
         </mat-expansion-panel-header>
-
-          <p>tipo: {{plato.tipoPlato}}</p>
-          <p>agregado: {{plato.agregadoPlato}}</p>
+          <p>Tipo: {{plato.tipoPlato}}</p>
+          <p>Agregado: {{plato.agregadoPlato}}</p>
           <mat-action-row>
-            <button mat-raised-button color="primary">Editar</button>
+            <button (click)="onEditar()" mat-raised-button color="primary">Editar</button>
+            <div *ngIf="toggle">
+  <h2>Editar plato seleccionado</h2>
+    <form class="editar">
+      <mat-form-field class="editarf">
+        <input matInput placeholder={{plato.nombrePlato}} value="">
+      </mat-form-field>
+    </form>
+  </div>
           </mat-action-row>
       </mat-expansion-panel>
     </mat-accordion>
