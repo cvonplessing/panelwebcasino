@@ -12,6 +12,7 @@ import { SenderComponent } from './sender/sender.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PlatosService} from './services_/platos.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,

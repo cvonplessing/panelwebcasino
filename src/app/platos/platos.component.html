@@ -33,21 +33,3 @@
 <div class="bcontenedor">
   <div class="block">
     <mat-accordion *ngFor="let plato of defaultPlatos;" >
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-
-          <mat-panel-title>
-            <h1> {{plato.nombrePlato}} </h1>
-          </mat-panel-title>
-
-        </mat-expansion-panel-header>
-          <p>Tipo: {{plato.tipoPlato}}</p>
-          <p>Agregado: {{plato.agregadoPlato}}</p>
-          <mat-action-row>
-            <button mat-raised-button color="primary">Editar</button>
-          </mat-action-row>
-      </mat-expansion-panel>
-    </mat-accordion>
-
-  </div>
-</div>
