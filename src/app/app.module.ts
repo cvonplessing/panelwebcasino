@@ -11,20 +11,24 @@ import { Material } from './modules_/material';
 import { SenderComponent } from './sender/sender.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PlatosService} from './services_/platos.service';
+import { EditarComponent } from './editar/editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlatosComponent,
     LoginComponent,
-    SenderComponent
+    SenderComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
     Material,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     PlatosService

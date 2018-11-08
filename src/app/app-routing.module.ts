@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PlatosComponent } from './platos/platos.component';
 import {SenderComponent} from './sender/sender.component';
 import {LoginComponent} from './login/login.component';
+import {EditarComponent} from './editar/editar.component';
 
 const AppRoutes: Routes = [
 
@@ -28,6 +29,10 @@ const AppRoutes: Routes = [
   {
     path: 'sender',
     component: SenderComponent
+  },
+  {
+    path: 'editar',
+    component: EditarComponent
   },
 
 
