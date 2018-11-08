@@ -12,6 +12,7 @@ import { SenderComponent } from './sender/sender.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PlatosService} from './services_/platos.service';
 import { EditarComponent } from './editar/editar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditarComponent } from './editar/editar.component';
     PlatosComponent,
     LoginComponent,
     SenderComponent,
-    EditarComponent
+    EditarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
