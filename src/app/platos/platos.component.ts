@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Plato } from '../models_/plato';
-import { Casino } from '../models_/casino';
+
+import {PlatosService} from '../services_/platos.service';
+
 @Component({
   selector: 'app-platos',
   templateUrl: './platos.component.html',
@@ -8,9 +9,16 @@ import { Casino } from '../models_/casino';
 })
 export class PlatosComponent implements OnInit {
 
-  defaultCasino: Casino = new Casino(0, 'Ombligo');
   // hardcode
-  platos: Plato[] = [
+
+  public defaultCasino: any = [
+    {
+      idCasino: 1,
+      nombreCasino: 'Ombligo'
+    }
+  ];
+
+  public defaultPlatos: any = [
     {
       idPlato: 1,
       nombrePlato: 'Frito de acelga coliflor con puré mixto',
@@ -32,9 +40,33 @@ export class PlatosComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  public cdate: any;
+
+  constructor(private service: PlatosService) {
+    /*
+    this.http.get('http://localhost:3000/queries/*').subscribe(response => {
+      // console.log(response);
+
+      this.defaultPlatos = response;
+    });
+
+    */
+  }
 
   ngOnInit() {
+    this.service.getCasinos().subscribe(response => {
+      console.log(response);
+      // this.defaultPlatos = response;
+    });
+  }
 
+  getTodayPlatos() {
+    this.service.getTodayPlatos().subscribe(response => {
+      console.log(response);
+      });
+  }
+
+  currentDate() {
+    console.log(this.cdate);
   }
 }

@@ -2,16 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35vh;
+  height: 15vh;
 }
 .span{
-  font-family: Verdana, sans-serif;
+
   font-weight:bold;
   font-size:16px;
 }
 .card-container {
   background-color: white;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;

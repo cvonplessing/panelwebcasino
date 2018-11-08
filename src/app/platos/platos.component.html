@@ -4,70 +4,50 @@
     <span class="toolbar-spacer"></span>
     <span>{{defaultCasino.nombreCasino}}</span>
     <div class="example-button-row">
-      <button mat-button>Salir</button>
+      <a mat-button routerLink="/login" routerLinkActive="active" >Salir</a>
     </div>
-
   </mat-toolbar-row>
 
   <mat-toolbar-row>
+
     <span>Búsqueda de minutas</span>
 
     <div class="buscador">
       <mat-form-field>
-        <input placeholder="mm/dd/año" matInput [matDatepicker]="picker">
+        <input  placeholder="mm/dd/año" matInput [matDatepicker]="picker" name="cvalue" (keyup.enter)="currentDate()">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
 
+
     <span class="toolbar-spacer"></span>
     <div class="example-button-row">
       <button mat-button>Cambiar de casino</button>
-      <button mat-button>Subir minuta</button>
+      <a mat-button routerLink="/sender" routerLinkActive="active">Subir minuta</a>
     </div>
   </mat-toolbar-row>
 
 </mat-toolbar>
 
-
 <div class="bcontenedor">
   <div class="block">
-    <mat-accordion *ngFor="let plato of platos;" >
+    <mat-accordion *ngFor="let plato of defaultPlatos;" >
       <mat-expansion-panel>
         <mat-expansion-panel-header>
 
           <mat-panel-title>
-            {{plato.nombrePlato}}
+            <h1> {{plato.nombrePlato}} </h1>
           </mat-panel-title>
-          <mat-panel-description>
-            No sé qué poner aquí para que se vea bonito
-          </mat-panel-description>
+
         </mat-expansion-panel-header>
-          <p>tipo: {{plato.tipoPlato}}</p>
-          <p>agregado: {{plato.agregadoPlato}}</p>
-<<<<<<< HEAD
-          <div class="boton">
-              <button (click)="onEditar()" mat-raised-button color="primary">Editar</button>
-                <div *ngIf="toggle">
-                  <h2>Editar plato seleccionado</h2>
-                    <form class="editar">
-                      <mat-form-field class="editarf">
-                        <input matInput placeholder={{plato.nombrePlato}} value="">
-                      </mat-form-field>
-                    </form>
-                </div>
-              </div>
-=======
+          <p>Tipo: {{plato.tipoPlato}}</p>
+          <p>Agregado: {{plato.agregadoPlato}}</p>
           <mat-action-row>
-            <button mat-raised-button color="primary">Editar</button>
+            <button mat-raised-button routerLink="/editar" color="primary">Editar</button>
           </mat-action-row>
->>>>>>> 3a5a19666a92dc231ce07b171ca3e2913961dce8
       </mat-expansion-panel>
     </mat-accordion>
 
   </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3a5a19666a92dc231ce07b171ca3e2913961dce8
 </div>
