@@ -15,18 +15,14 @@
 }
 
 .block{
-  border-style:solid;
-<<<<<<< HEAD
-  border-color:blue;
-  margin-left:30px;
-=======
+
   border-color:black;
   margin-left:auto;
 }
+
 .buttonblock{
   border-style:solid;
   border-color:black;
->>>>>>> 3a5a19666a92dc231ce07b171ca3e2913961dce8
   margin-right:auto;
   margin-left:auto;
 }

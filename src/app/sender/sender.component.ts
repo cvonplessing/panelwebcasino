@@ -6,10 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sender.component.css']
 })
 export class SenderComponent implements OnInit {
+  progress;
+  canBeClosed = true;
+  primaryButtonText = 'Upload';
+  showCancelButton = true;
+  uploading = false;
+  uploadSuccessful = false;
 
   constructor() { }
+
 
   ngOnInit() {
   }
 
+  addFiles(){
+
+  }
+
+  onFilesAdded(){
+
+  }
 }

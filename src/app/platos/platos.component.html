@@ -1,40 +1,50 @@
 <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Administración Casinos UdeC</span>
+    <span class="toolbar-spacer"></span>
+    <span>{{defaultCasino.nombreCasino}}</span>
+    <div class="example-button-row">
+      <a mat-button routerLink="/login" routerLinkActive="active" >Salir</a>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+
     <span>Búsqueda de minutas</span>
 
     <div class="buscador">
       <mat-form-field>
-        <input placeholder="mm/dd/año" matInput [matDatepicker]="picker">
+        <input  placeholder="mm/dd/año" matInput [matDatepicker]="picker" name="cvalue" (keyup.enter)="currentDate()">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
+
+
+    <span class="toolbar-spacer"></span>
+    <div class="example-button-row">
+      <button mat-button>Cambiar de casino</button>
+      <a mat-button routerLink="/sender" routerLinkActive="active">Subir minuta</a>
+    </div>
+  </mat-toolbar-row>
+
 </mat-toolbar>
 
 <div class="bcontenedor">
   <div class="block">
-    <mat-accordion *ngFor="let plato of platos;" >
+    <mat-accordion *ngFor="let plato of defaultPlatos;" >
       <mat-expansion-panel>
         <mat-expansion-panel-header>
 
           <mat-panel-title>
             <h1> {{plato.nombrePlato}} </h1>
           </mat-panel-title>
-          <mat-panel-description>
-            No sé qué poner aquí para que se vea bonito
-          </mat-panel-description>
+
         </mat-expansion-panel-header>
           <p>Tipo: {{plato.tipoPlato}}</p>
           <p>Agregado: {{plato.agregadoPlato}}</p>
           <mat-action-row>
             <button mat-raised-button color="primary">Editar</button>
-            <div *ngIf="toggle">
-  <h2>Editar plato seleccionado</h2>
-    <form class="editar">
-      <mat-form-field class="editarf">
-        <input matInput placeholder={{plato.nombrePlato}} value="">
-      </mat-form-field>
-    </form>
-  </div>
           </mat-action-row>
       </mat-expansion-panel>
     </mat-accordion>

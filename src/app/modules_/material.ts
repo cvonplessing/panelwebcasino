@@ -1,9 +1,11 @@
-import { MatAutocompleteModule, MatToolbarModule, MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatExpansionModule, MatCardModule, MatTableModule} from '@angular/material';
+
+import { MatToolbarModule, MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatExpansionModule, MatCardModule, MatTableModule, MatDialogModule, MatProgressBarModule, MatListModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({
-    imports: [MatAutocompleteModule, MatToolbarModule, MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatExpansionModule, MatCardModule, MatTableModule],
-    exports: [MatAutocompleteModule, MatToolbarModule, MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatExpansionModule, MatCardModule, MatTableModule],
+    imports: [MatToolbarModule, MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatExpansionModule, MatCardModule, MatTableModule, MatDialogModule, MatProgressBarModule, MatListModule],
+    exports: [MatToolbarModule, MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule, MatExpansionModule, MatCardModule, MatTableModule, MatDialogModule, MatProgressBarModule, MatListModule],
+
 })
 export class Material { }
-1
+
