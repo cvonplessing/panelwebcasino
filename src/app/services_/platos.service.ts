@@ -6,21 +6,21 @@ import { map } from 'rxjs/operators';
 })
 export class PlatosService {
 
-  private route = 'http://localhost:3000/queries/*';
+  private route1 = 'http://localhost:3000/queries/*';
   private defaultDate: any;
   // private todayPlatos: any;
-
+  private route2 = 'http://localhost:3000/queries/*';
   constructor(private http: HttpClient) { }
 
 
-  getCasinos() {
-     return this.http.get(this.route);
+  getCasinosPerUser(userEmail: string) {
+     return this.http.get(this.route1);
 
   }
 
 
   getTodayPlatos() {
-    return this.http.get(this.route);
+    return this.http.get(this.route2);
 
   }
 

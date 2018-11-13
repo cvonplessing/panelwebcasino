@@ -11,12 +11,6 @@ export class PlatosComponent implements OnInit {
 
   // hardcode
 
-  public defaultCasino: any = [
-    {
-      idCasino: 1,
-      nombreCasino: 'Ombligo'
-    }
-  ];
 
   public defaultPlatos: any = [
     {
@@ -58,6 +52,7 @@ export class PlatosComponent implements OnInit {
     this.service.getCasinos().subscribe(response => {
       console.log(response);
       // this.defaultPlatos = response;
+
     });
     */
   }
@@ -69,4 +64,3 @@ export class PlatosComponent implements OnInit {
   }
 
 }
-
