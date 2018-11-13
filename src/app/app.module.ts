@@ -12,10 +12,13 @@ import { SenderComponent } from './sender/sender.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PlatosService} from './services_/platos.service';
 import { EditarComponent } from './editar/editar.component';
+
 import {SenderService} from './services_/sender.service';
 import { JwtInterceptor} from './http_/jwt.interceptor';
 import {ErrorInterceptor } from './http_/error.interceptor';
 import {LoginService} from './services_/login.service';
+
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import {LoginService} from './services_/login.service';
     PlatosComponent,
     LoginComponent,
     SenderComponent,
-    EditarComponent
+    EditarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
