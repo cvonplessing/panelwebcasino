@@ -40,7 +40,7 @@ export class PlatosComponent implements OnInit {
     }
   ];
 
-  public cdate: any;
+  public cDate: any;
 
   constructor(private service: PlatosService) {
     /*
@@ -54,10 +54,12 @@ export class PlatosComponent implements OnInit {
   }
 
   ngOnInit() {
+    /*
     this.service.getCasinos().subscribe(response => {
       console.log(response);
       // this.defaultPlatos = response;
     });
+    */
   }
 
   getTodayPlatos() {
@@ -66,7 +68,5 @@ export class PlatosComponent implements OnInit {
       });
   }
 
-  currentDate() {
-    console.log(this.cdate);
-  }
 }
+

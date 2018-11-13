@@ -42,24 +42,25 @@
 
   <mat-card  class="card-content">
 
-    <form  class="form-elements">
+    <form class="form-elements" (submit)="loggIn($event)" >
       <br/>
       <p>LOGIN</p>
       <mat-form-field class="form-row">
-                                    <span matTooltip="Username">
-                                        <input matInput placeholder="E-mail" id="username"  name="username">
-                                    </span>
+        <span matTooltip="Username">
+          <input matInput placeholder="E-mail" id="username" ngModel name="username" #username="ngModel" >
+        </span>
         <span matPrefix></span>
       </mat-form-field>
 
       <mat-form-field class="form-row">
-                                    <span matTooltip="Password">
-                                        <input matInput placeholder="Contraseña" id="password"  name="gpassword" type="password">
-                                    </span>
+        <span matTooltip="Password">
+          <input matInput placeholder="Contraseña" id="password" ngModel name="gpassword" #gpassword="ngModel"  type="password">
+        </span>
         <span matPrefix></span>
       </mat-form-field>
       <br/>
-      <a mat-raised-button color="primary" type="submit" style="border-radius:15px;max-height:6vh;" routerLink="/platos">Entrar</a>
+      <a mat-raised-button color="primary" type="submit" (click)="logIn(username.value, gpassword.value)" style="border-radius:15px;max-height:6vh;">Entrar</a>
     </form>
 
   </mat-card>
+</div>

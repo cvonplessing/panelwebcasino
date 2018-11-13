@@ -14,7 +14,7 @@
 
     <div class="buscador">
       <mat-form-field>
-        <input  placeholder="mm/dd/año" matInput [matDatepicker]="picker" name="cvalue" (keyup.enter)="currentDate()">
+        <input  placeholder="mm/dd/año" matInput [matDatepicker]="picker" ngModel="cDate" >
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
@@ -33,3 +33,23 @@
 <div class="bcontenedor">
   <div class="block">
     <mat-accordion *ngFor="let plato of defaultPlatos;" >
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+
+          <mat-panel-title>
+            <h1> {{plato.nombrePlato}} </h1>
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+          <p>Tipo: {{plato.tipoPlato}}</p>
+          <p>Agregado: {{plato.agregadoPlato}}</p>
+          <mat-action-row>
+            <button mat-raised-button routerLink="/editar" color="primary">Editar</button>
+          </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </div>
+</div>
+
