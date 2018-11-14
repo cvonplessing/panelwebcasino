@@ -5,18 +5,26 @@
 
     <div class="buscador">
       <mat-form-field>
-        <input  placeholder="mm/dd/año" matInput [matDatepicker]="picker" ngModel="cDate" >
+        <input  placeholder="mm/dd/año" matInput [matDatepicker]="picker" [(ngModel)]="inputDate" (keyup.enter)="loli(inputDate)"  >
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
   </mat-toolbar-row>
 
+
+
+
+
+
+
+
+
 </mat-toolbar>
 
 <div class="bcontenedor">
   <div class="block">
-    <mat-accordion *ngFor="let plato of defaultPlatos;" >
+    <mat-accordion *ngFor="let plato of currentPlatos;" >
 
       <mat-expansion-panel>
         <mat-expansion-panel-header>

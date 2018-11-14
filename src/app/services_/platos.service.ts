@@ -23,7 +23,7 @@ export class PlatosService {
     return this.http.get(this.route2);
 
   }
-  getTodayPlatos() {
+  getTodayPlatos(searchDate: any) {
     return this.http.get(this.route3);
 
   }

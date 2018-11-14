@@ -11,7 +11,7 @@ export class PlatosComponent implements OnInit {
 
   // hardcode
 
-
+  public currentPlatos: any[];
   public defaultPlatos: any = [
     {
       idPlato: 1,
@@ -35,7 +35,7 @@ export class PlatosComponent implements OnInit {
   ];
 
   public cDate: any;
-
+  public inputDate: any;
   constructor(private service: PlatosService) {
     /*
     this.http.get('http://localhost:3000/queries/*').subscribe(response => {
@@ -57,10 +57,16 @@ export class PlatosComponent implements OnInit {
     */
   }
 
-  getTodayPlatos() {
-    this.service.getTodayPlatos().subscribe(response => {
+  getTodayPlatos(inputDate) {
+    this.service.getTodayPlatos(inputDate).subscribe(response => {
+      // asignar respuesta a currentPlatos
+      // this.currentPlatos = response;
       console.log(response);
-      });
+      // console.log(inputDate)
+    });
   }
 
+  loli(lol: any){
+    console.log(lol);
+  }
 }
