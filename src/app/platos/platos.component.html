@@ -1,14 +1,5 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Administración Casinos UdeC</span>
-    <span class="toolbar-spacer"></span>
-    <span>{{defaultCasino.nombreCasino}}</span>
-    <div class="example-button-row">
-      <a mat-button routerLink="/login" routerLinkActive="active" >Salir</a>
-    </div>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
 
     <span>Búsqueda de minutas</span>
 
@@ -18,13 +9,6 @@
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-    </div>
-
-
-    <span class="toolbar-spacer"></span>
-    <div class="example-button-row">
-      <button mat-button>Cambiar de casino</button>
-      <a mat-button routerLink="/sender" routerLinkActive="active">Subir minuta</a>
     </div>
   </mat-toolbar-row>
 
