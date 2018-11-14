@@ -10,7 +10,7 @@ import { PlatosService } from '../services_/platos.service';
 export class HeaderComponent implements OnInit {
   // defaultCasino: Casino = new Casino(0, 'Ombligo');
   // test para ver si funciona el index defaut
-  defaultCasino: string;
+  defaultCasino: any;
   public Casinos: any = [
     {
       idCasino: 0,
@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   constructor(private service: PlatosService) { }
 
   ngOnInit() {
-    this.defaultCasino = this.Casinos[0];
+    this.defaultCasino = this.Casinos[0].nombreCasino;
   }
 
   getCasinos(userEmail) {
