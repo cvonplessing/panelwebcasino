@@ -9,9 +9,9 @@
     <div class="example-button-row">
       <a mat-button routerLink="/platos" routerLinkActive="active" >Lista de platos</a>
       <!-- <button mat-button>Cambiar de casino</button> -->
-      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <button mat-button [matMenuTriggerFor]="menu">Casinos</button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngFor="let casino of Casinos;" >
+        <button mat-menu-item *ngFor="let casino of Casinos;" (click)="changeCasino($event)" >
           {{casino.nombreCasino}}
         </button>
 

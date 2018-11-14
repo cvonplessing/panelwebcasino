@@ -14,13 +14,15 @@ export class HeaderComponent implements OnInit {
   public Casinos: any = [
     {
       idCasino: 0,
-      nombreCasino: 'Obligo'
+      nombreCasino: 'Ombligo'
     },
     {
       idCasino: 1,
       nombreCasino: 'Cafetería los patos'
     }
   ];
+
+  private userEmail: string;
 
   constructor(private service: PlatosService) { }
 
@@ -35,5 +37,12 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  changeCasino(event) {
+    this.defaultCasino = event.target.innerText;
+    this.service.getPlatosPerCasino(this.userEmail, this.defaultCasino).subscribe(response => {
+      // asignar respuestas al componente platos;
+      console.log(response);
+    });
+  }
 
 }

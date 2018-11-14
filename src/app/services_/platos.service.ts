@@ -10,17 +10,21 @@ export class PlatosService {
   private defaultDate: any;
   // private todayPlatos: any;
   private route2 = 'http://localhost:3000/queries/*';
+  private route3 = 'http://localhost:3000/queries/*';
   constructor(private http: HttpClient) { }
 
 
-  getCasinosPerUser(userEmail: string) {
+  getCasinosPerUser(userEmail: any) {
      return this.http.get(this.route1);
 
   }
 
-
-  getTodayPlatos() {
+  getPlatosPerCasino(userEmail: any, casino: any) {
     return this.http.get(this.route2);
+
+  }
+  getTodayPlatos() {
+    return this.http.get(this.route3);
 
   }
 
