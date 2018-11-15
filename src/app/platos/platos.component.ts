@@ -11,13 +11,7 @@ export class PlatosComponent implements OnInit {
 
   // hardcode
 
-  public defaultCasino: any = [
-    {
-      idCasino: 1,
-      nombreCasino: 'Ombligo'
-    }
-  ];
-
+  public currentPlatos: any[];
   public defaultPlatos: any = [
     {
       idPlato: 1,
@@ -39,10 +33,11 @@ export class PlatosComponent implements OnInit {
       agregadoPlato: 'Postre y ensalda/sopa'
     }
   ];
-
-  public cdate: any;
-
+  private userEmail: string;
+  public cDate: any;
+  public inputDate: any;
   constructor(private service: PlatosService) {
+
     /*
     this.http.get('http://localhost:3000/queries/*').subscribe(response => {
       // console.log(response);
@@ -54,19 +49,26 @@ export class PlatosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.service.cast.subscribe(user => this.userEmail);
+    /*
     this.service.getCasinos().subscribe(response => {
       console.log(response);
       // this.defaultPlatos = response;
+
+    });
+    */
+  }
+
+  getTodayPlatos(inputDate) {
+    this.service.getTodayPlatos(inputDate).subscribe(response => {
+      // asignar respuesta a currentPlatos
+      // this.currentPlatos = response;
+      console.log(response);
+      // console.log(inputDate)
     });
   }
 
-  getTodayPlatos() {
-    this.service.getTodayPlatos().subscribe(response => {
-      console.log(response);
-      });
-  }
-
-  currentDate() {
-    console.log(this.cdate);
+  loli(lol: any) {
+     console.log(lol);
   }
 }

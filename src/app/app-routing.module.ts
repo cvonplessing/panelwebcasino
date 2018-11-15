@@ -11,7 +11,7 @@ const AppRoutes: Routes = [
 
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/platos',
     pathMatch: 'full'
   },
 

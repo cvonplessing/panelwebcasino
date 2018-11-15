@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SenderService} from '../services_/sender.service';
 
 @Component({
   selector: 'app-sender',
@@ -6,24 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sender.component.css']
 })
 export class SenderComponent implements OnInit {
-  progress;
-  canBeClosed = true;
-  primaryButtonText = 'Upload';
-  showCancelButton = true;
-  uploading = false;
-  uploadSuccessful = false;
 
-  constructor() { }
+  fileToUpload: File = null;
+
+  constructor(private service: SenderService) { }
 
 
   ngOnInit() {
   }
 
-  addFiles(){
-
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
   }
 
-  onFilesAdded(){
-
+  uploadFileToActivity() {
+    this.service.postFile(this.fileToUpload).subscribe(data => {
+      console.log(data);
+    }, error => {
+      console.log(error);
+    });
   }
 }
