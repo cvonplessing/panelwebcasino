@@ -6,12 +6,13 @@ import { PlatosComponent } from './platos/platos.component';
 import {SenderComponent} from './sender/sender.component';
 import {LoginComponent} from './login/login.component';
 import {EditarComponent} from './editar/editar.component';
+import {HeaderComponent} from './header/header.component';
 
 const AppRoutes: Routes = [
 
   {
     path: '',
-    redirectTo: '/platos',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
 
@@ -20,22 +21,23 @@ const AppRoutes: Routes = [
     component: LoginComponent
   },
   {
-
-    path: 'platos',
-    component: PlatosComponent
-
+    path: 'home',
+    component: HeaderComponent,
+    children: [
+      {
+        path: 'platos',
+        component: PlatosComponent
+      },
+      {
+        path: 'sender',
+        component: SenderComponent
+      },
+      {
+        path: 'editar',
+        component: EditarComponent
+      }
+    ]
   },
-
-  {
-    path: 'sender',
-    component: SenderComponent
-  },
-  {
-    path: 'editar',
-    component: EditarComponent
-  },
-
-
   {
     path: '**',
     redirectTo: '/login',

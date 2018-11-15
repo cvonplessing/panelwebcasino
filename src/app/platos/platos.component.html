@@ -24,7 +24,7 @@
 
 <div class="bcontenedor">
   <div class="block">
-    <mat-accordion *ngFor="let plato of currentPlatos;" >
+    <mat-accordion *ngFor="let plato of defaultPlatos;" >
 
       <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -37,11 +37,10 @@
           <p>Tipo: {{plato.tipoPlato}}</p>
           <p>Agregado: {{plato.agregadoPlato}}</p>
           <mat-action-row>
-            <button mat-raised-button routerLink="/editar" color="primary">Editar</button>
+            <button mat-raised-button routerLink="/home/editar" color="primary">Editar</button>
           </mat-action-row>
       </mat-expansion-panel>
     </mat-accordion>
 
   </div>
 </div>
-
