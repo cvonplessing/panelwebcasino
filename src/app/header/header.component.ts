@@ -24,12 +24,6 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
-<<<<<<< HEAD
-  constructor(private service: PlatosService) { }
-
-  ngOnInit() {
-    this.defaultCasino = this.Casinos[0];
-=======
   private userEmail: any;
   // hardcodeado;
 
@@ -39,7 +33,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.service.cast.subscribe(user => this.userEmail = user);
     this.defaultCasino = this.Casinos[0].nombreCasino;
->>>>>>> d2904baeda06c62c9ab7758132ed63d1d1b20699
   }
 
   getCasinos(userEmail) {
@@ -49,5 +42,12 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  changeCasino(event) {
+    this.defaultCasino = event.target.innerText;
+    this.service.getPlatosPerCasino(this.userEmail, this.defaultCasino).subscribe(response => {
+      // asignar respuestas al componente platos;
+      console.log(response);
+    });
+  }
 
 }
