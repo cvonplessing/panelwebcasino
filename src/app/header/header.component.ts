@@ -10,7 +10,7 @@ import { PlatosService } from '../services_/platos.service';
 export class HeaderComponent implements OnInit {
   // defaultCasino: Casino = new Casino(0, 'Ombligo');
   // test para ver si funciona el index defaut
-  defaultCasino: any;
+  defaultCasino: string;
   public Casinos: any = [
     {
       idCasino: 0,
@@ -22,12 +22,10 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
-  private userEmail: string;
-
   constructor(private service: PlatosService) { }
 
   ngOnInit() {
-    this.defaultCasino = this.Casinos[0].nombreCasino;
+    this.defaultCasino = this.Casinos[0];
   }
 
   getCasinos(userEmail) {
@@ -37,12 +35,5 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  changeCasino(event) {
-    this.defaultCasino = event.target.innerText;
-    this.service.getPlatosPerCasino(this.userEmail, this.defaultCasino).subscribe(response => {
-      // asignar respuestas al componente platos;
-      console.log(response);
-    });
-  }
 
 }
