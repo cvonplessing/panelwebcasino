@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   // test para ver si funciona el index defaut
 
   defaultCasino: any;
-
+ // hardcode
   public Casinos: any = [
     {
       idCasino: 0,
@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   ];
 
   private userEmail: any;
-  // probablemente hardcodeado;
+  // hardcodeado;
 
   constructor(private service: PlatosService) {
   }

@@ -8,6 +8,7 @@ import { LoginService} from '../services_/login.service';
 })
 export class LoginComponent implements OnInit {
   cUser: any;
+
   constructor(private service: LoginService) { }
 
   ngOnInit() {
