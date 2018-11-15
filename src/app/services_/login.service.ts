@@ -6,12 +6,13 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LoginService {
-
+  private route ='http://localhost:3000/queries/*';
 
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string) {
-    return this.http.post<any>(`/users/authenticate`, { username, password })
+    //escribir esta wea de nuevo
+    return this.http.post<any>(this.route, { username, password })
       .pipe(map(user => {
         // login successful if there's a jwt token in the response
         if (user && user.token) {

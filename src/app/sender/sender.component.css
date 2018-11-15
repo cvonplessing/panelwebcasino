@@ -25,3 +25,13 @@ Angular material culiao
   opacity: 0;
 }
 */
+
+.centrito{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 100px;
+  border-radius: 25px;
+  background: #73AD21;
+}
