@@ -18,11 +18,15 @@ export class LoginGuard implements CanActivate {
 
 */
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    // borrar este if después de implementada la consulta
+    if (true) {
+      return true;
+    }
+
     if (localStorage.getItem('currentUser')) {
       // logged in so return true
       return true;
     }
-
     // not logged in so redirect to login page with the return url
     this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
     return false;

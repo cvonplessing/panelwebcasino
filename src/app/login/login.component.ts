@@ -7,7 +7,7 @@ import { LoginService} from '../services_/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  cUser: any;
   constructor(private service: LoginService) { }
 
   ngOnInit() {
@@ -18,7 +18,12 @@ export class LoginComponent implements OnInit {
     // const target = event.target;
     // console.log(event);
     console.log(username, gpassword);
+
+    // this.cUser = this.service.login(username, gpassword);
+
   }
 
 
 }
+
+

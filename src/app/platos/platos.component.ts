@@ -33,10 +33,11 @@ export class PlatosComponent implements OnInit {
       agregadoPlato: 'Postre y ensalda/sopa'
     }
   ];
-
+  private userEmail: string;
   public cDate: any;
   public inputDate: any;
   constructor(private service: PlatosService) {
+
     /*
     this.http.get('http://localhost:3000/queries/*').subscribe(response => {
       // console.log(response);
@@ -48,6 +49,7 @@ export class PlatosComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.service.cast.subscribe(user => this.userEmail);
     /*
     this.service.getCasinos().subscribe(response => {
       console.log(response);
@@ -66,7 +68,7 @@ export class PlatosComponent implements OnInit {
     });
   }
 
-  loli(lol: any){
-    console.log(lol);
+  loli(lol: any) {
+     console.log(lol);
   }
 }
